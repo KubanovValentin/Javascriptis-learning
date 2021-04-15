@@ -19,3 +19,17 @@
 /* конец */
 
 
+
+
+/* для игры реакция */
+
+#shape {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(247, 8, 8);
+    display: none;
+    /* перемещение фигуры будет с помощью позиционирования */
+    position: relative;
+    top: 100px;
+    left: 200px;
+}
