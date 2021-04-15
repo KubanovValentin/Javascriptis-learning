@@ -21,49 +21,49 @@
 <button id="createButton">click</button>
 <P id="moreText" >После нажатия я стану таким ! </P>
 <button id="styleText">нажми для стиля</button> -->
-<!-- <script>
+<!-- <>
     document.getElementById("text").innerHTML = "привет";
-</script> -->
+</> -->
 <!-- сдесь мы заменяем h1 текст на текст в скрипте - привет  с помощью - (.innerHTML =) -->
 
 
-<!-- <script>
+<!-- <>
     document.getElementById("myButton").onclick = function (){
         alert ("есть");
     }
-</script> -->
+</> -->
 <!-- в этом скрипте мы при нажатии на кнопку получаем уведомление(окно )с текстом - есть -->
 
-<!-- <script>
+<!-- <>
     document.getElementById("myButton").onclick = function () {
         document.getElementById("text").innerHTML = "привет";
     }
-</script> -->
+</> -->
 <!-- в этом скрипте мы меняем при нажатии на кнопку текст(hello world !!!) меняеться на (привет). мы сначала обращаемся к getElementById("text") а потом меняем на innerHTML = "привет" -->
 
-<!-- <script>
+<!-- <>
     document.getElementById("myButton").onclick = function () {
         document.getElementById("text").innerHTML = "привет";
     }
     document.getElementById("secondButton").onclick = function () {
         document.getElementById("secondParagraph").innerHTML = document.getElementById("secondParagraph").innerHTML + "мир";
     }
-</script> -->
+</> -->
 <!-- сдесь мы к secondParagraph добавляем (innerHTML) документ равный документу secondParagraph и плюсум слово "мир" и у нас получаеться  при нажатии надпись  ----- Javascriptis....мир . расширенно это документ secondParagraph равен документу secondParagraph + "мир" . В программирование это называеться аапент - добавлять что то в конец строки которая была раньше-->
 <!-- для того что бы добавить что либо перед текстом Javascriptis.... надо всего лишь сделать так document.getElementById("secondParagraph").innerHTML = "я люлю "  + document.getElementById("secondParagraph").innerHTML + "мир"; -->
 
-<!-- <script>
+<!-- <>
     document.getElementById("createButton").onclick = function () {
         document.getElementById("emptyParagraph").innerHTML = "привет тому кто нажал на кнопку";
     }
-</script> -->
+</> -->
 <!-- сдесь мы добавляем текст в пустой параграф emptyParagraph -->
 
-<!-- <script>
+<!-- <>
     document.getElementById("styleText").onclick = function () {
         document.getElementById("moreText").style.color = "red";
     }
-</script> -->
+</> -->
 <!-- для  сого чтобы сделать стилизацию (css) надо вместо innerHTML применить style (можно менять цвет-color = "red" нужного getElementById("moreText") либо fontSize(которое должно писаться вместе без пробелов) ) -->
  <!-- так же мы можем сделать что бы элемент изчез - .style.display = "none"  благодаря этому свойству он был удален из потока странички-->
 
@@ -76,7 +76,7 @@
 <div id="yellow" class="circle"></div>
 <div id="green" class="circle"></div>
 
-<script>
+<>
     document.getElementById("red").onclick = function () {
         document.getElementById("red").style.display = "none";
     }
@@ -86,7 +86,7 @@
     document.getElementById("green").onclick = function () {
         document.getElementById("green").style.display = "none";
     }
-</script> -->
+</> -->
 <!-- при наведении на круги они изчезают  -->
 
 <!-- ------------------------------------------------------------------------------------------------------------------ -->
@@ -94,7 +94,7 @@
 <!-- <input type="text" id="textInput">
  <button id="textChenger">нажми</button>
  <p id="textEnd"> какой то тест</p>
-<script>
+<>
     document.getElementById("textChenger").onclick = function () {
         var textEntered = "";
         textEntered = document.getElementById("textInput").value; 
@@ -103,11 +103,11 @@
 
     }
 
-</script> -->
+</> -->
 <!-- -------------------------------------------------------------------------------------------------------------- -->
 <!-- массивы -->
 
-<!-- <script>
+<!-- <>
     // первый способ
     var myArray = new Array ();
     myArray[0] = "пицца";
@@ -137,12 +137,12 @@ tweetts.splice (1, 0, "пора пить кофе")
 // цифра 0 говорит что количество  не убираем
 // если мы хотим заменить что либо на что либо то просто ненужно убираем  и вставляем нужное
 console.log(tweetts);
-</script> -->
+</> -->
 
 
 
 <!-- операторы -->
-<!-- <script>
+<!-- <>
     var x = 2;
 
     if(x == 1) {
@@ -151,7 +151,7 @@ console.log(tweetts);
         alert("fals");
     }
     // если х = 1 то оповещение (alert) скажет что это правда,если х будет другим -не 1 то будет не правда
-</script>
+</>
  -->
 
 
@@ -161,7 +161,7 @@ console.log(tweetts);
 <!-- <p>что за магический мир</p>
 <p><input id="magicWord" type="text"></p>
 <p><button id="magicClick">нажми на меня</button></p>
- <script>
+ <>
     //  напишем логику -и мы хотим чтобы она запускалась от нажатия кнопки
     // это функция для нажатия кнопки
     document.getElementById("magicClick").onclick = function () {
@@ -181,7 +181,7 @@ console.log(tweetts);
         }
 
     }
- </script> -->
+ </> -->
 
 
 <!-- -------------------------------------------- -->
@@ -190,7 +190,7 @@ console.log(tweetts);
  <p>сколько пальцев на руке</p>
  <p><input id="guess" type="text"><button id="checkGuess">угадай</button></p>
  
- <script>
+ <>
     // alert(Math.floor(Math.random() * 6));
     document.getElementById("checkGuess").onclick = function () {
         var randomNumber = Math.random();
@@ -202,7 +202,175 @@ console.log(tweetts);
             alert("нет вы не угадали,это число " + randomNumber);
         }
     }
- </script> -->
+ </> -->
+
+
+
+
+<!-- ---------------------------------------------------------------- -->
+<!-- циклы -->
+<!-- это по сути запуск одного и того же кода  который повторяеться много раз -->
+<!-- для этого пишем команду фор что бы начать наш цикл а затем добавляем некоторую информацию для отслеживания состояния цикла
+// содаем пепеменную счетчика которая увеличиваеться каждый раз проходя цикл-->
+<!--<script> -->
+    <!-- // for (var i = 0; i < 5; i ++) {
+    //     alert(i);
+    // }
+    // поэксперементируем
+    // for (var i = 5; i > 0; i --) {
+    //     alert(i);
+    // }
+// теперь обьеденим циклы и массивы т.к они хорошо подходят друг другу
+// попытаемся отобразить твиты но мы не  знаем сколько их поэтому пройдемся по массиву с помощью цикла
+// создаем массив твитта
+
+// var tweets = ["привет", "доброе утро", "вкусное коффе.", "esss"]
+// for (var i = 0; i < tweets.length; i ++) {
+//     // ввиду того что могут добавляться твитты то нужно правильнее писать длину массива с помощью tweets.length и благодаря этому не надо будет при добавлении менять код
+//         alert(tweets[i]);
+//     }
+
+// теперь сделаем так чтобы это отображалось не а алерте а на страничке -->
+<!-- </script> -->
+
+
+
+
+<!-- // теперь сделаем так чтобы это отображалось не а алерте а на страничке  -->
+
+
+<!-- <div id="tweetDiv"></div>
+<script>
+    //  создадим переменую которая будет содержать штмл для твитов
+    var tweetString = "";
+    // всегда надо давать своим переменным начальное значение даже если это пустая строка
+    //  и потом в самом конце поместим содержимое этой переменной в див
+    var tweets = ["привет", "доброе утро", "вкусное коффе.", "esss"];
+    for (var i = 0; i < tweets.length; i ++) {
+        tweetString = tweetString + "<p>" + tweets[i] + "</p>";
+    }
+    document.getElementById("tweetDiv").innerHTML = tweetString;
+
+</script> -->
+<!-- это первый тип цикла for -->
+
+
+<!-- 
+_--------------------------------------------------------------------------------------------------------- -->
+
+<!-- теперь расмотрим второй тип цикла while -->
+
+<!-- <div id="tweetDiv"></div>
+<script>
+    var tweetString = "";
+    var tweets = ["привет", "доброе утро", "вкусное коффе.", "esss"];
+    // для того чтобы цикл while работал надо i установить вне цикла
+    var i = 0
+    // условие для продолжения цикла
+    while (i < tweets.length) {
+        tweetString = tweetString + "<p>" + tweets[i] + "</p>";
+        i ++;
+    }
+    document.getElementById("tweetDiv").innerHTML = tweetString;
+// логика - сначало определяем переменную а потом выполняем цикл.они более гибкие
+</script>  -->
+
+
+
+<!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- теперь сделаем игру такую когда не мы угадываем сколько  пальцев а компьютер и после сообщим сколько ходов он сделал -->
+
+<!-- <p>сколько пальцев на руке</p>
+<p><select id="myNumber" type="text">
+    <option >0</option>
+    <option >1</option>
+    <option >2</option>
+    <option >3</option>
+    <option >4</option>
+    <option >5</option>
+</select>
+<button id="guess">угадай</button></p>
+<script>
+    document.getElementById("guess").onclick = function () {
+        var myNumber = document.getElementById("myNumber").value;
+        var gotIt = false;
+        var numberOfGuesses = 1;
+        while (gotIt == false) {
+            var guess = Math.random();
+            guess = guess * 6;
+            guess = Math.floor(guess);
+            if (guess == myNumber) {
+                gotIt = true;
+                alert("класс ,это " + guess + "это" + numberOfGuesses + "число");
+            } else {
+                numberOfGuesses++;
+            }
+        }
+    }
+</script> -->
+
+
+<!-- ------------------------------------------------------------------------------------ -->
+<!-- функции -->
+<!-- <script>
+    function alertMy() {
+        alert("hi Valentin");
+        // мы только определили функцию.без вызова функции
+    }
+    // что бы запустить эту функцию делаем ниже
+    alertMy();
+    // зачем это делать? а для того что когда создаем более сложные веб сайты определенные куски кода мы будем вызывать снова и снова и как правило не стоит копировать и вставлять один и тот же код и намного лучше оформить ее как функцию
+// функции нам позволяют делать код более простым и читаемым
+</script> -->
+
+
+<!-- продукт где есть усреднение чисел и смотрим как сделать -->
+<!-- <script>
+    function average(a,b) {
+        return ((a + b) / 2);
+    }
+    var x = 5;
+    var y = 10;
+    alert(average(x, y));
+</script> -->
+
+
+<!-- <p><select id="myNumber" type="text">
+    <option >0</option>
+    <option >1</option>
+    <option >2</option>
+    <option >3</option>
+    <option >4</option>
+    <option >5</option>
+</select>
+<button id="guess">угадай</button></p>
+<script>
+    function doAGuess(correctAnswer) {
+        var guess = Math.random();
+            guess = guess * 6;
+            guess = Math.floor(guess);
+            if (guess == correctAnswer) {
+                return(true);
+            } else {
+                return(false);
+            }
+    }
+    document.getElementById("guess").onclick = function () {
+        var myNumber = document.getElementById("myNumber").value;
+        var gotIt = false;
+        var numberOfGuesses = 1;
+        while (gotIt == false) {
+            if (doAGuess(myNumber)== true) {
+                gotIt = true;
+                alert("класс ,это " + myNumber + "это" + numberOfGuesses + "число");
+            } else {
+                numberOfGuesses++;
+            }
+        }
+    }
+</script> -->
+
 
 
 </body>
